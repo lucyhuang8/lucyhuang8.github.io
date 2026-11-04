@@ -106,32 +106,31 @@
     </footer>
 
     <script>
-    const prefixEl = document.getElementById('typewriter-prefix');
-    const nameEl = document.getElementById('typewriter-name');
+        const prefixEl = document.getElementById('typewriter-prefix');
+        const nameEl = document.getElementById('typewriter-name');
 
-    const part1 = "Hi, I'm ";
-    const part2 = "Lucy Huang";
+        const part1 = "Hi, I'm ";
+        const part2 = "Lucy Huang";
 
-    let i = 0;
-    let j = 0;
+        let i = 0;
+        let j = 0;
 
-    function typeWriter() {
-        if (i < part1.length) {
-            prefixEl.textContent += part1.charAt(i);
-            i++;
-            setTimeout(typeWriter, 80);
-        } else if (j < part2.length) {
-            nameEl.textContent += part2.charAt(j);
-            j++;
-            setTimeout(typeWriter, 100);
+        function typeWriter() {
+            if (i < part1.length) {
+                prefixEl.textContent += part1.charAt(i);
+                i++;
+                setTimeout(typeWriter, 70);
+            } else if (j < part2.length) {
+                nameEl.textContent += part2.charAt(j);
+                j++;
+                setTimeout(typeWriter, 90);
+            }
         }
-    }
 
-    // Start typing after a short initial pause
-    window.addEventListener('DOMContentLoaded', () => {
-        setTimeout(typeWriter, 300);
-    });
-</script>
+        // Elements are already in the DOM right above this script, so start directly:
+        setTimeout(typeWriter, 250);
+    </script>
+
 
 </body>
 </html>
