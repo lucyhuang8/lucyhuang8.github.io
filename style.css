@@ -106,11 +106,19 @@ section {
     margin-bottom: 1.5rem;
 }
 
-.hero-content p {
+/* .hero-content p {
     font-size: 1.15rem;
     color: var(--text-muted);
     max-width: 650px;
     margin-bottom: 2.5rem;
+} */
+
+.hero-content p {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 1000px; /* Expands bounds so the full sentence stays on one line */
+    margin-bottom: 2.5rem;
+    white-space: nowrap; /* Guarantees it won't break into a second line on desktop */
 }
 
 .highlight {
@@ -412,4 +420,7 @@ footer {
     .contact-links { flex-direction: column; gap: 1rem; align-items: center; }
     .btn.secondary { margin-left: 0; width: 100%; max-width: 250px; }
     .btn { width: 100%; max-width: 250px; text-align: center; }
+    .hero-content p {
+        white-space: normal; /* Allows natural wrapping on mobile screens */
+    }
 }
