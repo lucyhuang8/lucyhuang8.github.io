@@ -117,67 +117,38 @@ section {
     color: var(--accent-teal);
 }
 
-/* TYPEWRITER STYLE ANIMATION */
+/* TYPEWRITER STYLE */
 .typewriter-container {
-    display: inline-flex;
-    align-items: baseline;
     font-size: 3.5rem;
     font-weight: 800;
     letter-spacing: -1px;
     margin-bottom: 0.75rem;
-    white-space: nowrap;
-    gap: 0.3em; /* Sets a clean, natural single space between words */
-}
-
-/* Part 1: "Hi, I'm" */
-.typing-first {
-    color: var(--text-main);
     display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    border-right: 4px solid var(--accent-teal);
-    animation: 
-        type-first 1.1s steps(7, end) 0.2s forwards,
-        blink-first 0.75s step-end 2;
 }
 
-/* Part 2: "Lucy Huang" */
-.typing-second {
+.typewriter-container .highlight {
     color: var(--accent-teal);
+}
+
+.cursor {
     display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    border-right: 4px solid transparent;
-    animation: 
-        type-second 1.5s steps(10, end) 1.5s forwards,
-        blink-second 0.75s step-end infinite 1.5s;
+    width: 4px;
+    height: 1em;
+    background-color: var(--accent-teal);
+    vertical-align: -0.05em;
+    margin-left: 2px;
+    animation: blink 0.8s step-end infinite;
 }
 
-/* --- Animation Timelines --- */
-@keyframes type-first {
-    from { 
-        max-width: 0; 
-    }
-    to { 
-        max-width: 100%; 
-        width: max-content;
-        border-right-color: transparent; 
-    }
+@keyframes blink {
+    from, to { opacity: 0; }
+    50% { opacity: 1; }
 }
 
-@keyframes type-second {
-    from { 
-        max-width: 0; 
-        border-right-color: var(--accent-teal); 
-    }
-    to { 
-        max-width: 100%; 
-        width: max-content;
-        border-right-color: var(--accent-teal); 
-    }
+@media (max-width: 768px) {
+    .typewriter-container { font-size: 2.2rem; }
 }
+
 
 /* Cursors */
 @keyframes blink-first {
