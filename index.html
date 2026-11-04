@@ -37,6 +37,33 @@
     <section id="projects">
         <h2>Featured Projects</h2>
         <div class="project-grid">
+
+        <!-- Filter Buttons -->
+<div class="filter-controls">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="research">Research</button>
+    <button class="filter-btn" data-filter="rf-hardware">RF &amp; Hardware</button>
+    <button class="filter-btn" data-filter="aerospace">Aerospace</button>
+</div>
+
+<!-- Project Cards -->
+<div class="project-grid">
+    <!-- Card with one category -->
+    <div class="project-card" data-category="research">
+        ...
+    </div>
+
+    <!-- Card with one category -->
+    <div class="project-card" data-category="rf-hardware">
+        ...
+    </div>
+
+    <!-- Card that belongs to multiple categories (separated by a space) -->
+    <div class="project-card" data-category="rf-hardware aerospace">
+        ...
+    </div>
+</div>
+
             
             <!-- Current Research (QLMC) -->
             <div class="project-card" data-category="research">
