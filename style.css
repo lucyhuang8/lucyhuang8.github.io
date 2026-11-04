@@ -273,6 +273,25 @@ section {
     color: var(--accent-teal);
 }
 
+/* Project Awards List */
+.project-awards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    margin-bottom: 1.5rem;
+}
+
+.award-badge {
+    background-color: rgba(13, 148, 136, 0.08);
+    color: var(--text-main);
+    border-left: 3px solid var(--accent-teal);
+    padding: 0.35rem 0.65rem;
+    border-radius: 0 4px 4px 0;
+    font-size: 0.82rem;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
 /* contact and footer */
 #contact {
     text-align: center;
