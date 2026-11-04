@@ -63,8 +63,6 @@
         ...
     </div>
 </div>
-
-            
             <!-- Current Research (QLMC) -->
             <div class="project-card" data-category="research">
                 <div class="card-status-row">
@@ -366,6 +364,34 @@
                 });
             });
         });
+
+        // Filter projects by domain
+const filterBtns = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // 1. Highlight the clicked button
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // 2. Read the filter category
+        const selectedFilter = btn.getAttribute('data-filter');
+
+        // 3. Show or hide each card
+        projectCards.forEach(card => {
+            const categories = card.getAttribute('data-category') || '';
+            
+            // Check if card matches "all" or contains the selected tag
+            if (selectedFilter === 'all' || categories.split(' ').includes(selectedFilter)) {
+                card.classList.remove('hidden');
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+    });
+});
+
 
     </script>
 
