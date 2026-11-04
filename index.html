@@ -33,66 +33,43 @@
         </div>
     </section>
 
-        <!-- Projects Section -->
+    <!-- Projects Section -->
     <section id="projects">
         <h2>Featured Projects</h2>
+
+        <!-- Filter Buttons (Outside the grid to maintain compact pill styling) -->
+        <div class="filter-controls">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="research">Research</button>
+            <button class="filter-btn" data-filter="rf-hardware">RF &amp; Hardware</button>
+            <button class="filter-btn" data-filter="aerospace">Aerospace</button>
+        </div>
+
+        <!-- Project Cards Grid -->
         <div class="project-grid">
 
-        <!-- Filter Buttons -->
-<div class="filter-controls">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="research">Research</button>
-    <button class="filter-btn" data-filter="rf-hardware">RF &amp; Hardware</button>
-    <button class="filter-btn" data-filter="aerospace">Aerospace</button>
-</div>
-
-<!-- Project Cards -->
-<div class="project-grid">
-    <!-- Card with one category -->
-    <div class="project-card" data-category="research">
-        ...
-    </div>
-
-    <!-- Card with one category -->
-    <div class="project-card" data-category="rf-hardware">
-        ...
-    </div>
-
-    <!-- Card that belongs to multiple categories (separated by a space) -->
-    <div class="project-card" data-category="rf-hardware aerospace">
-        ...
-    </div>
-</div>
             <!-- Current Research (QLMC) -->
             <div class="project-card" data-category="research">
                 <div class="card-status-row">
                     <span class="status-indicator active"><span class="pulse-dot"></span> Active Research</span>
                     <span class="project-year">Sept 2026 – Present</span>
                 </div>
-
                 <h3>Dual-Comb Spectroscopy on Photonic Chips</h3>
                 <p class="project-sub">Quantum Light-Matter Cooperative (QLMC)</p>
-                <p class="project-year">2026</p>
                 <div class="tech-tags">
                     <span>Photonic ICs</span>
                     <span>Quantum Sensing</span>
                     <span>Dual-Comb</span>
                     <span>SNR Optimization</span>
                 </div>
-
-                <!-- <div class="project-links">
-                    <a href="https://github.com" target="_blank">Code</a>
-                    <a href="#" target="_blank">Live Demo</a>
-                </div> -->
             </div>
 
-            <!-- IEEE Wrap -->
+            <!-- IEEE WRAP -->
             <div class="project-card" data-category="rf-hardware">
                 <div class="card-status-row">
                     <span class="status-indicator active"><span class="pulse-dot"></span> Active Project</span>
                     <span class="project-year">Oct 2026 – Present</span>
                 </div>
-
                 <h3>27 MHz Discrete Wireless Transceiver &amp; DSP</h3>
                 <p class="project-sub">IEEE UCLA — Wireless, RF, &amp; Analog Project (WRAP)</p>
                 <div class="tech-tags">
@@ -102,11 +79,6 @@
                     <span>STM32</span>
                     <span>PCB Layout</span>
                 </div>
-
-                <!-- <div class="project-links">
-                    <a href="https://github.com" target="_blank">Code</a>
-                    <a href="#" target="_blank">Live Demo</a>
-                </div> -->
             </div>
 
             <!-- BruinSpace RAPID -->
@@ -115,8 +87,7 @@
                     <span class="status-indicator active"><span class="pulse-dot"></span> Active Project</span>
                     <span class="project-year">Oct 2026 – Present</span>
                 </div>
-
-                <h3>RAPID Mission 3U Cube Sat Antenna &ampl RF Front-End</h3>
+                <h3>RAPID Mission 3U CubeSat Antenna &amp; RF Front-End</h3>
                 <p class="project-sub">BruinSpace &bull; Electrical Team</p>
                 <div class="tech-tags">
                     <span>Vector Network Analyzer</span>
@@ -125,11 +96,6 @@
                     <span>GNU Radio</span>
                     <span>Impedance Matching</span>
                 </div>
-
-                <!-- <div class="project-links">
-                    <a href="https://github.com" target="_blank">Code</a>
-                    <a href="#" target="_blank">Live Demo</a>
-                </div> -->
             </div>
 
             <!-- Design Build Fly -->
@@ -138,7 +104,6 @@
                     <span class="status-indicator active"><span class="pulse-dot"></span> Active Project</span>
                     <span class="project-year">Oct 2026 – Present</span>
                 </div>
-
                 <h3>Electronics &amp; Propulsion</h3>
                 <p class="project-sub">AIAA Design, Build, Fly (DBF) at UCLA</p>
                 <div class="tech-tags">
@@ -146,21 +111,15 @@
                     <span>Telemetry</span>
                     <span>Electronic Speed Controller Benchmarking</span>
                 </div>
-
-                <!-- <div class="project-links">
-                    <a href="https://github.com" target="_blank">Code</a>
-                    <a href="#" target="_blank">Live Demo</a>
-                </div> -->
             </div>
 
-            <!-- Research Card 1 -->
+            <!-- Research Card 1: Co-Assembly -->
             <div class="project-card" data-category="research">
                 <div class="card-status-row">
                     <span class="status-indicator completed">Completed</span>
                     <span class="project-year">2026</span>
                 </div>
                 <h3>Co-Assembly of Au Nanospheres and Graphene Oxide into Plasmonically Active Films</h3>
-                <p class="project-year">2026</p>
                 <div class="tech-tags">
                     <span>Simulation</span>
                     <span>ANSYS Lumerical</span>
@@ -170,7 +129,6 @@
                     <span>UV-Vis-NIR Spectroscopy</span>
                     <span>THz Measurements</span>
                 </div>
-
                 <details class="award-accordion" open>
                     <summary>
                         <span>Honors &amp; Presentations</span>
@@ -183,27 +141,20 @@
                         </li>
                     </ul>
                 </details>
-
-                <!-- <div class="project-links">
-                    <a href="https://github.com" target="_blank">Code</a>
-                    <a href="#" target="_blank">Live Demo</a>
-                </div> -->
             </div>
 
-            <!-- Research Card 2 -->
+            <!-- Research Card 2: Nanocubes -->
             <div class="project-card" data-category="research">
                 <div class="card-status-row">
                     <span class="status-indicator completed">Completed</span>
                     <span class="project-year">2025</span>
                 </div>
                 <h3>Simulating the Optical Properties of Copper(I) Oxide Nanocubes in Monolayer Films and with Structural Alterations</h3>
-                <p class="project-year">2025</p>
                 <div class="tech-tags">
                     <span>Python</span>
                     <span>ANSYS Lumerical</span>
                     <span>Finite-Difference Time-Domain</span>
                 </div>
-
                 <details class="award-accordion" open>
                     <summary>
                         <span>Honors &amp; Awards</span>
@@ -236,27 +187,20 @@
                         </li>
                     </ul>
                 </details>
-
-                <!-- <div class="project-links">
-                    <a href="https://github.com" target="_blank">Code</a>
-                    <a href="#" target="_blank">Live Demo</a>
-                </div> -->
             </div>
 
-            <!-- Research Card 3 -->
+            <!-- Research Card 3: Morphology -->
             <div class="project-card" data-category="research">
                 <div class="card-status-row">
                     <span class="status-indicator completed">Completed</span>
                     <span class="project-year">2024</span>
                 </div>
                 <h3>Morphological Changes and Kinetic Insights of Copper(I) Oxide Nanocrystals</h3>
-                <p class="project-year">2024</p>
                 <div class="tech-tags">
                     <span>Wet Lab Synthesis</span>
                     <span>UV-Vis Spectroscopy</span>
                     <span>Scanning Electron Microscopy</span>
                 </div>
-
                 <details class="award-accordion" open>
                     <summary>
                         <span>Honors &amp; Awards</span>
@@ -289,16 +233,10 @@
                         </li>
                     </ul>
                 </details>
-
-                <!-- <div class="project-links">
-                    <a href="https://github.com" target="_blank">Code</a>
-                    <a href="#" target="_blank">Live Demo</a>
-                </div> -->
             </div>
 
         </div>
     </section>
-
 
     <!-- Contact Section -->
     <section id="contact">
@@ -306,8 +244,8 @@
         <p>I am currently searching for 2027 summer internship opportunities related to DSP and control systems, RF mixed signal design, digital design, photonic integrated circuit, and quantum computing. Please feel free to reach out!</p>
         <div class="contact-links">
             <a href="mailto:huanglucy@ucla.edu" class="btn">Email</a>
-            <a href="https://www.linkedin.com/in/lucy99/" target="_blank" class="btn secondary">LinkedIn</a>
-            <a href="https://github.com/lucyhuang8" target="_blank" class="btn secondary">GitHub</a>
+            <a href="https://www.linkedin.com/in/lucy99/" target="_blank" rel="noopener noreferrer" class="btn secondary">LinkedIn</a>
+            <a href="https://github.com/lucyhuang8" target="_blank" rel="noopener noreferrer" class="btn secondary">GitHub</a>
         </div>
     </section>
 
@@ -317,6 +255,7 @@
     </footer>
 
     <script>
+        // Typewriter Animation
         const prefixEl = document.getElementById('typewriter-prefix');
         const nameEl = document.getElementById('typewriter-name');
 
@@ -338,7 +277,6 @@
             }
         }
 
-        // Elements are already in the DOM right above this script, so start directly:
         setTimeout(typeWriter, 250);
 
         // Interactive Domain Filter
@@ -347,7 +285,7 @@
 
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Update active button state
+                // Update active button styling
                 filterBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
 
@@ -356,7 +294,7 @@
                 // Filter cards based on data-category
                 projectCards.forEach(card => {
                     const categories = card.getAttribute('data-category') || '';
-                    if (selectedFilter === 'all' || categories.includes(selectedFilter)) {
+                    if (selectedFilter === 'all' || categories.split(' ').includes(selectedFilter)) {
                         card.classList.remove('hidden');
                     } else {
                         card.classList.add('hidden');
@@ -364,37 +302,7 @@
                 });
             });
         });
-
-        // Filter projects by domain
-const filterBtns = document.querySelectorAll('.filter-btn');
-const projectCards = document.querySelectorAll('.project-card');
-
-filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        // 1. Highlight the clicked button
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        // 2. Read the filter category
-        const selectedFilter = btn.getAttribute('data-filter');
-
-        // 3. Show or hide each card
-        projectCards.forEach(card => {
-            const categories = card.getAttribute('data-category') || '';
-            
-            // Check if card matches "all" or contains the selected tag
-            if (selectedFilter === 'all' || categories.split(' ').includes(selectedFilter)) {
-                card.classList.remove('hidden');
-            } else {
-                card.classList.add('hidden');
-            }
-        });
-    });
-});
-
-
     </script>
-
 
 </body>
 </html>
