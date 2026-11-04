@@ -119,29 +119,30 @@ section {
 
 /* TYPEWRITER STYLE ANIMATION */
 .typewriter-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: inline-flex;
+    align-items: center;
     font-size: 3.5rem;
     font-weight: 800;
     letter-spacing: -1px;
     margin-bottom: 0.75rem;
+    white-space: nowrap;
 }
 
-/* Part 1: "Hi, I'm " (Off-Black/Navy main text) */
+/* Part 1: "Hi, I'm " (8 characters) */
 .typing-first {
     color: var(--text-main);
     display: inline-block;
-    white-space: nowrap;
+    white-space: pre; /* Preserves trailing space cleanly without &nbsp; */
     overflow: hidden;
     width: 0;
     border-right: 4px solid var(--accent-teal);
-    /* 8 characters: H, i, ,,  , I, ', m, \s */
+    vertical-align: bottom;
     animation: 
-        type-first 1.2s steps(8, end) forwards,
-        blink-first 0.75s step-end 2; /* Blinks twice, then stops */
+        type-first 1.2s steps(8, end) 0.2s forwards,
+        blink-first 0.75s step-end 2;
 }
 
-/* Part 2: Your Name (Teal blue accent text) */
+/* Part 2: "Lucy Huang" (10 characters) */
 .typing-second {
     color: var(--accent-teal);
     display: inline-block;
@@ -149,21 +150,32 @@ section {
     overflow: hidden;
     width: 0;
     border-right: 4px solid transparent;
-    /* Waits exactly 1.5s for Part 1 to wrap up, then steps 11 times for "Abcd Efghi" */
+    vertical-align: bottom;
     animation: 
-        type-second 1.8s steps(11, end) 1.5s forwards,
+        type-second 1.5s steps(10, end) 1.5s forwards,
         blink-second 0.75s step-end infinite 1.5s;
 }
 
 /* --- Animation Timelines --- */
 @keyframes type-first {
-    from { width: 0; }
-    to { width: 8ch; } /* 'ch' forces the width to match the exact letter count */
+    from { 
+        width: 0; 
+    }
+    to { 
+        width: 8ch; 
+        border-right-color: transparent; /* Caret vanishes when Part 1 ends */
+    }
 }
 
 @keyframes type-second {
-    from { width: 0; }
-    to { width: 11ch; } /* Fits your 11 character name perfectly */
+    from { 
+        width: 0; 
+        border-right-color: var(--accent-teal); /* Caret appears when Part 2 begins */
+    }
+    to { 
+        width: 10ch; 
+        border-right-color: var(--accent-teal); 
+    }
 }
 
 /* Cursors */
