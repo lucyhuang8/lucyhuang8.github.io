@@ -314,6 +314,31 @@
 
         // Elements are already in the DOM right above this script, so start directly:
         setTimeout(typeWriter, 250);
+
+        // Interactive Domain Filter
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button state
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const selectedFilter = btn.getAttribute('data-filter');
+
+                // Filter cards based on data-category
+                projectCards.forEach(card => {
+                    const categories = card.getAttribute('data-category') || '';
+                    if (selectedFilter === 'all' || categories.includes(selectedFilter)) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
     </script>
 
 
