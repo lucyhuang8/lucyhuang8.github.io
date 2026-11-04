@@ -124,6 +124,7 @@ section {
     font-size: 3.5rem;
     font-weight: 800;
     letter-spacing: -1px;
+    margin-bottom: 0.75rem;
 }
 
 /* Part 1: "Hi, I'm " (Off-Black/Navy main text) */
@@ -134,10 +135,10 @@ section {
     overflow: hidden;
     width: 0;
     border-right: 4px solid var(--accent-teal);
-    /* Types out in 1.5 seconds, then removes its cursor border */
+    /* 8 characters: H, i, ,,  , I, ', m, \s */
     animation: 
-        type-first 1.5s steps(8, end) forwards,
-        blink 0.75s step-end infinite;
+        type-first 1.2s steps(8, end) forwards,
+        blink-first 0.75s step-end 2; /* Blinks twice, then stops */
 }
 
 /* Part 2: Your Name (Teal blue accent text) */
@@ -148,10 +149,10 @@ section {
     overflow: hidden;
     width: 0;
     border-right: 4px solid transparent;
-    /* WAITS 1.5 seconds for Part 1 to finish, then types out and keeps blinking cursor */
+    /* Waits exactly 1.5s for Part 1 to wrap up, then steps 11 times for "Abcd Efghi" */
     animation: 
-        type-second 2s steps(10, end) 1.5s forwards,
-        blink-delayed 0.75s step-end infinite 1.5s;
+        type-second 1.8s steps(11, end) 1.5s forwards,
+        blink-second 0.75s step-end infinite 1.5s;
 }
 
 /* --- Animation Timelines --- */
@@ -162,17 +163,16 @@ section {
 
 @keyframes type-second {
     from { width: 0; }
-    to { width: 10ch; } /* Adjust this to match your name's character length */
+    to { width: 11ch; } /* Fits your 11 character name perfectly */
 }
 
 /* Cursors */
-@keyframes blink {
+@keyframes blink-first {
     from, to { border-color: transparent; }
     50% { border-color: var(--accent-teal); }
-    100% { border-color: transparent; } /* Turns off cursor when done */
 }
 
-@keyframes blink-delayed {
+@keyframes blink-second {
     from, to { border-color: transparent; }
     50% { border-color: var(--accent-teal); }
 }
@@ -315,6 +315,7 @@ footer {
 
 /* for mobile devices */
 @media (max-width: 768px) {
+    .typewriter-container { font-size: 2.5rem; }
     .hero-content h1 { font-size: 2.5rem; }
     .hero-content h2 { font-size: 1.4rem; }
     .contact-links { flex-direction: column; gap: 1rem; align-items: center; }
