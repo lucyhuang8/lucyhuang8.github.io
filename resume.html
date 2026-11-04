@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .resume-page {
-            max-width: 920px;
+            max-width: 940px;
             margin: 0 auto;
             padding: 7rem 2rem 5rem;
         }
@@ -118,19 +118,19 @@
         }
 
         .entry-bullets li {
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.45rem;
             font-size: 0.95rem;
             line-height: 1.5;
         }
 
-        /* Nested honors sub-bullets */
         .entry-bullets ul {
             list-style-type: circle;
             padding-left: 1.25rem;
-            margin-top: 0.3rem;
+            margin-top: 0.35rem;
             margin-bottom: 0.5rem;
         }
 
+        /* Skills & Scholarships Grid */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -155,6 +155,16 @@
             color: var(--text-muted);
             font-size: 0.9rem;
             line-height: 1.45;
+        }
+
+        /* SciOly Details Styling */
+        .scioly-category {
+            margin-bottom: 0.75rem;
+        }
+
+        .scioly-category strong {
+            color: var(--text-main);
+            font-size: 0.95rem;
         }
 
         @media (max-width: 768px) {
@@ -227,7 +237,7 @@
                 </div>
                 <ul class="entry-bullets">
                     <li><strong>Relevant Coursework:</strong> Differential Equations, Data Structures and Algorithms, IoT, Multivariable Calculus, Discrete Math, Linear Algebra.</li>
-                    <li><strong>Student Organizations:</strong> IEEE WRAP (Wireless, RF, Analog Project), Engineering Student Association (ESA Intern), BruinSpace (RAPID Electrical), Design Build Fly (Electronics and Propulsion Team), Society of Women Engineers (SWE).</li>
+                    <li><strong>Collegiate Technical Affiliations:</strong> IEEE WRAP (Wireless, RF, Analog Project), Engineering Student Association (ESA Intern), BruinSpace (RAPID Electrical), Design Build Fly (Electronics and Propulsion Team), Society of Women Engineers (SWE).</li>
                 </ul>
             </div>
         </section>
@@ -238,11 +248,15 @@
             <div class="skills-grid">
                 <div class="skill-card">
                     <strong>Languages &amp; Software</strong>
-                    <span>C++, Python, Java, MATLAB, Linux, Ansys Lumerical, Autodesk Inventor, Fusion 360</span>
+                    <span>C++, Python, Java, MATLAB, Linux/Bash, SQL, HTML/CSS, Ansys Lumerical, Autodesk Inventor, Fusion 360</span>
                 </div>
                 <div class="skill-card">
                     <strong>Hardware &amp; Instrumentation</strong>
-                    <span>Oscilloscopes, Function Generator, UV-Vis-NIR Spectroscopy, SEM, FTIR, Raman</span>
+                    <span>Oscilloscopes, Function Generators, Breadboarding &amp; Circuit Prototyping, UV-Vis-NIR Spectroscopy, SEM, FTIR, Raman</span>
+                </div>
+                <div class="skill-card">
+                    <strong>Technical Breadth &amp; Languages</strong>
+                    <span>FDTD Modeling, Photonic Integration, AI/ML Fundamentals, Spanish (California State Seal of Biliteracy)</span>
                 </div>
             </div>
         </section>
@@ -277,50 +291,122 @@
                 <ul class="entry-bullets">
                     <li>Assembled gold nanospheres functionalized with graphene oxide, analyzing plasmonic coupling.</li>
                     <li>Synthesized copper(I) oxide nanocrystals, designing CAD intersectional structures for finite-difference time-domain (FDTD) simulations.</li>
-                    <li>Developed FDTD automation scripts using the Lumerical Python API to optimize the experimental data collection process.</li>
+                    <li>Developed FDTD automation scripts using the Lumerical Python API to optimize data collection pipelines.</li>
                 </ul>
             </div>
         </section>
 
-        <!-- Work Experience -->
+        <!-- Technical Programs & Projects -->
         <section class="resume-section">
-            <h2 class="resume-section-title">Work Experience</h2>
+            <h2 class="resume-section-title">Technical Development &amp; Programs</h2>
 
             <div class="resume-entry">
                 <div class="entry-header">
                     <div>
-                        <span class="entry-title">Math and Language Arts Teaching Assistant</span>
+                        <span class="entry-title">Mentee Representative &amp; Project Team Member</span>
+                        <div class="entry-org">UCSD Empowering Development for Girls in Engineering (EDGE)</div>
+                    </div>
+                    <span class="entry-date">April 2023 – May 2026</span>
+                </div>
+                <ul class="entry-bullets">
+                    <li>Built and articulated a robotic arm; designed and wired breadboards for reaction-time games and temperature sensors.</li>
+                    <li>Developed AI conversational gamebots and chatbots in project sprints; elected to the advisory board to represent mentee initiatives over a 4-year commitment.</li>
+                </ul>
+            </div>
+
+            <div class="resume-entry">
+                <div class="entry-header">
+                    <div>
+                        <span class="entry-title">FutureStars &amp; StarCoders Program</span>
+                        <div class="entry-org">Depository Trust &amp; Clearing Corporation (DTCC)</div>
+                    </div>
+                    <span class="entry-date">September 2025 – Present</span>
+                </div>
+                <ul class="entry-bullets">
+                    <li>Examined automated financial market clearing infrastructures, participating in software engineering workshops, hackathons, and algorithmic coding challenges.</li>
+                </ul>
+            </div>
+
+            <div class="resume-entry">
+                <div class="entry-header">
+                    <div>
+                        <span class="entry-title">Engineering &amp; Coding Scholar</span>
+                        <div class="entry-org">Girls Who Code &amp; Kode with Klossy</div>
+                    </div>
+                    <span class="entry-date">June 2023 – August 2026</span>
+                </div>
+                <ul class="entry-bullets">
+                    <li>Completed intensive tracks spanning Data Science (Python, SQL, Tableau), Artificial Intelligence/Machine Learning, Cybersecurity, and Web Development across consecutive selective cohorts.</li>
+                    <li>Completed SWENext High School Leadership Academy (2024–2026), engaging with senior engineering mentors from tier-one hardware and aerospace firms.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Teaching & Volunteer Experience -->
+        <section class="resume-section">
+            <h2 class="resume-section-title">Teaching &amp; Community Leadership</h2>
+
+            <div class="resume-entry">
+                <div class="entry-header">
+                    <div>
+                        <span class="entry-title">Math &amp; Language Arts Teaching Assistant</span>
                         <div class="entry-org">Art of Problem Solving, San Diego, CA</div>
                     </div>
                     <span class="entry-date">April 2026 – Present</span>
                 </div>
                 <ul class="entry-bullets">
-                    <li>Directed virtual homework help sessions on advanced mathematical topics ranging from Pre-Algebra to High School Contest Math.</li>
-                    <li>Led in-person summer camps for Math Beasts Camp 3 and High School Contest Math.</li>
+                    <li>Directed virtual teaching sessions covering competition mathematics</li>
+                    <li>TA for Pre-Algebra through High School Contest Math</li>
+                    <li>Led in-person summer instructional tracks for Math Beasts Camp 3 through AMC 10/12</li>
                 </ul>
             </div>
 
             <div class="resume-entry">
                 <div class="entry-header">
                     <div>
-                        <span class="entry-title">Court Monitor</span>
-                        <div class="entry-org">University City Racquet Club, San Diego, CA</div>
+                        <span class="entry-title">K-12 STEM &amp; Academic Tutor</span>
+                        <div class="entry-org">Casa de Amistad, Solana Beach, CA</div>
                     </div>
-                    <span class="entry-date">June 2023 – February 2025</span>
+                    <span class="entry-date">March 2023 – May 2026</span>
                 </div>
                 <ul class="entry-bullets">
-                    <li>Managed business operations including court bookings, retail sales, tournament logistics, and weekly league match direction.</li>
-                    <li>Oversaw membership enrollment, facility repairs, maintenance scheduling, and customer service.</li>
+                    <li>Empowered first-generation underserved students through customized academic roadmaps and foundational STEM mentorship; conducted outreach and family consultations in Spanish.</li>
+                    <li>Awarded Presidential Volunteer Service Award (Bronze, 2024) for sustained community contribution.</li>
+                </ul>
+            </div>
+
+            <div class="resume-entry">
+                <div class="entry-header">
+                    <div>
+                        <span class="entry-title">Co-President, Head Coach &amp; Competitor</span>
+                        <div class="entry-org">Science Olympiad</div>
+                    </div>
+                    <span class="entry-date">September 2018 – May 2026</span>
+                </div>
+                <ul class="entry-bullets">
+                    <li>Directed a 30+ member competitive roster, coordinating curriculum, materials, and lab preparation; elevated state standing by 3 ranks.</li>
+                    <li>Captain &amp; MVP, Torrey Pines Girls Tennis (2023–2024): Led team to a 90% increase in match wins year-over-year.</li>
                 </ul>
             </div>
         </section>
 
-        <!-- Publications, Honors & Awards -->
+        <!-- Scholarships, Honors & Awards -->
         <section class="resume-section">
-            <h2 class="resume-section-title">Publications, Honors &amp; Awards</h2>
+            <h2 class="resume-section-title">Scholarships, Honors &amp; Awards</h2>
             
             <div class="resume-entry">
-                <span class="entry-title" style="font-size: 1.05rem;">Research Manuscripts &amp; Presentations</span>
+                <span class="entry-title" style="font-size: 1.05rem;">Merit Scholarships ($17,500+ Awarded)</span>
+                <ul class="entry-bullets">
+                    <li>Society of Women Engineers (SWE) Motorola Foundation Scholarship</li>
+                    <li>City of San Diego Engineering Scholarship</li>
+                    <li>San Diego Chinese Women Association Scholarship</li>
+                    <li>Paula B. Jones Memorial Scholarship</li>
+                    <li>Torrey Pines High School Scholarship Fund (TPHSSF)</li>
+                </ul>
+            </div>
+
+            <div class="resume-entry">
+                <span class="entry-title" style="font-size: 1.05rem;">Research Manuscripts &amp; Symposia</span>
                 <ul class="entry-bullets">
                     <li>
                         <strong>Huang, L., et al. (2026, August)</strong> <em>Co-Assembly of Au Nanospheres and Graphene Oxide into Plasmonically Active Films.</em> 2026 Summer Research Conference at UC San Diego.
@@ -328,72 +414,44 @@
                     <li>
                         <strong>Huang, L., et al. (2025, November)</strong> <em>Simulating the Optical Properties of Copper(I) Oxide Nanocubes in Monolayer Films and with Structural Alterations.</em>
                         <ul>
-                            <li>2026 California Science and Engineering Fair: Honorable Mention in Physics and Astronomy</li>
-                            <li>2026 Greater San Diego Science and Engineering Fair: 1st Place Award in Senior Engineering (Energy, Materials, and Transport); Winner of General Atomics Sciences Education Foundation &amp; DRS Daylight Solutions Awards</li>
+                            <li>2026 California Science &amp; Engineering Fair (CSEF): Honorable Mention in Physics &amp; Astronomy</li>
+                            <li>2026 Greater San Diego Science &amp; Engineering Fair (GSDSEF): 1st Place Senior Engineering; Winner of General Atomics Sciences Education Foundation &amp; DRS Daylight Solutions Awards</li>
                             <li>2025 Regeneron Science Talent Search: Research Manuscript</li>
-                            <li>2025 MRSEC RIMSE Poster Session at UC San Diego: Most Engaged High School Researcher</li>
+                            <li>2025 MRSEC RIMSE Poster Session (UCSD): Most Engaged High School Researcher</li>
                         </ul>
                     </li>
                     <li>
                         <strong>Huang, L., et al. (2024, April)</strong> <em>Morphological Changes and Kinetic Insights of Copper(I) Oxide Nanocrystals.</em>
                         <ul>
-                            <li>2025 California Science and Engineering Fair: Finalist in Chemistry</li>
-                            <li>2025 Greater San Diego Science and Engineering Fair: 1st Place Award in Senior Chemistry; Winner of Office of Naval Research Award, Association for Women in Science, and American Society of Materials International Awards</li>
-                            <li>2024 MRSEC RIMSE Poster Session at UC San Diego: Most Engaged High School Researcher</li>
+                            <li>2025 California Science &amp; Engineering Fair (CSEF): Finalist in Chemistry</li>
+                            <li>2025 Greater San Diego Science &amp; Engineering Fair (GSDSEF): 1st Place Senior Chemistry; Winner of Office of Naval Research (ONR) Award, AWIS, and ASM International Awards</li>
+                            <li>2024 MRSEC RIMSE Poster Session (UCSD): Most Engaged High School Researcher</li>
                         </ul>
                     </li>
-                </ul>
-            </div>
-
-            <div class="resume-entry">
-                <span class="entry-title" style="font-size: 1.05rem;">Academic Competitions &amp; Recognitions</span>
-                <ul class="entry-bullets">
                     <li><strong>NCWIT Aspirations in Computing:</strong> Rising Star Award (January 2026)</li>
-                    <li><strong>Science Olympiad:</strong> 5+ individual awards at Southern California States (2024–2026); led school's top 5 ranking and 10+ awards at San Diego Regional Finals (2019–2026); 10+ awards across Invitationals including Golden Gate (2026), Triton UCSD (2025–2026), Stanford (2025), and San Diego County (2019).</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Leadership -->
-        <section class="resume-section">
-            <h2 class="resume-section-title">Leadership</h2>
-
-            <div class="resume-entry">
-                <div class="entry-header">
-                    <div>
-                        <span class="entry-title">Co-President, Head Coach, Event Coach, Competitor</span>
-                        <div class="entry-org">Science Olympiad</div>
-                    </div>
-                    <span class="entry-date">September 2018 – May 2026</span>
-                </div>
-                <ul class="entry-bullets">
-                    <li>Led 30+ members per year, improving state rankings by 3 spots; coached team to invitational, regional, and state victories.</li>
                 </ul>
             </div>
 
+            <!-- Granular Science Olympiad Breakdown -->
             <div class="resume-entry">
-                <div class="entry-header">
-                    <div>
-                        <span class="entry-title">Student Leadership Board Member</span>
-                        <div class="entry-org">Greater San Diego Science and Engineering Fair (GSDSEF)</div>
-                    </div>
-                    <span class="entry-date">May 2025 – May 2026</span>
-                </div>
+                <span class="entry-title" style="font-size: 1.05rem;">Science Olympiad Competition Record (20+ Honors)</span>
                 <ul class="entry-bullets">
-                    <li>Promoted GSDSEF across regional schools, led technical workshops, and mentored students through project design and experimental execution.</li>
-                </ul>
-            </div>
-
-            <div class="resume-entry">
-                <div class="entry-header">
-                    <div>
-                        <span class="entry-title">Mentee Representative</span>
-                        <div class="entry-org">UCSD Empowering Development for Girls in Engineering (EDGE)</div>
-                    </div>
-                    <span class="entry-date">April 2023 – May 2026</span>
-                </div>
-                <ul class="entry-bullets">
-                    <li>Elected to serve on the board advocating mentee interests; committed 4 years to the bi-weekly engineering mentorship program.</li>
+                    <li class="scioly-category">
+                        <strong>California State Finals:</strong>
+                        14th Disease Detectives (2025), 14th Materials Science (2025), 16th Codebusters (2024), 19th Scrambler (2024), 20th Codebusters (2025).
+                    </li>
+                    <li class="scioly-category">
+                        <strong>San Diego Regional Finals:</strong>
+                        3rd Disease Detectives (2025), 4th Disease Detectives (2026), 6th Codebusters (2022), 9th Materials Science (2025), 9th Scrambler (2024), 14th Materials Science (2026), 16th Robot Tour (2024), 16th Codebusters (2025), 19th Codebusters (2024), 20th Engineering CAD (2026).
+                    </li>
+                    <li class="scioly-category">
+                        <strong>Collegiate &amp; National Invitationals:</strong>
+                        <ul>
+                            <li><strong>Stanford Invitational:</strong> 4th Place Disease Detectives, 12th Place Materials Science (2025).</li>
+                            <li><strong>UC San Diego Triton Invitational:</strong> 3rd Disease Detectives (2025), 7th Disease Detectives (2026), 10th Forensics (2025), 11th Materials Science (2025), 15th Codebusters (2025), 19th Astronomy (2025).</li>
+                            <li><strong>Golden Gate Invitational:</strong> 19th Place Disease Detectives (2026).</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </section>
