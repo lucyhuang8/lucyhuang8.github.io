@@ -117,31 +117,62 @@ section {
     color: var(--accent-teal);
 }
 
-/* typing text effects */
-.typing-text {
-    display: inline-block;
-    font-family: 'Inter', sans-serif; /* Keeps your modern header font */
+/* TYPEWRITER STYLE ANIMATION */
+.typewriter-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 3.5rem;
     font-weight: 800;
+    letter-spacing: -1px;
+}
+
+/* Part 1: "Hi, I'm " (Off-Black/Navy main text) */
+.typing-first {
+    color: var(--text-main);
+    display: inline-block;
     white-space: nowrap;
-    overflow: hidden; /* Hides letters until revealed */
-    border-right: 4px solid var(--accent-teal); /* Blinking cursor line */
-    width: 0; /* Starts hidden */
-    
-    /* 
-       - 'typing' takes 3.5 seconds to type out the line
-       - 'steps(18)' must match the exact number of characters (letters + spaces)
-    */
+    overflow: hidden;
+    width: 0;
+    border-right: 4px solid var(--accent-teal);
+    /* Types out in 1.5 seconds, then removes its cursor border */
     animation: 
-        typing 3.5s steps(18, end) forwards,
+        type-first 1.5s steps(8, end) forwards,
         blink 0.75s step-end infinite;
 }
 
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+/* Part 2: Your Name (Teal blue accent text) */
+.typing-second {
+    color: var(--accent-teal);
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    border-right: 4px solid transparent;
+    /* WAITS 1.5 seconds for Part 1 to finish, then types out and keeps blinking cursor */
+    animation: 
+        type-second 2s steps(10, end) 1.5s forwards,
+        blink-delayed 0.75s step-end infinite 1.5s;
 }
 
+/* --- Animation Timelines --- */
+@keyframes type-first {
+    from { width: 0; }
+    to { width: 8ch; } /* 'ch' forces the width to match the exact letter count */
+}
+
+@keyframes type-second {
+    from { width: 0; }
+    to { width: 10ch; } /* Adjust this to match your name's character length */
+}
+
+/* Cursors */
 @keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--accent-teal); }
+    100% { border-color: transparent; } /* Turns off cursor when done */
+}
+
+@keyframes blink-delayed {
     from, to { border-color: transparent; }
     50% { border-color: var(--accent-teal); }
 }
