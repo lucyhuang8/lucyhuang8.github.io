@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucy Huang | Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .resume-page {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 7rem 2rem 5rem;
+        }
+
+        .resume-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .resume-title h1 {
+            font-size: 2.75rem;
+            font-weight: 800;
+            color: var(--text-main);
+            letter-spacing: -1px;
+            margin-bottom: 0.25rem;
+        }
+
+        .resume-title p {
+            color: var(--accent-teal);
+            font-weight: 600;
+            font-size: 1.15rem;
+        }
+
+        .contact-info {
+            margin-top: 0.6rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .contact-info a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+
+        .contact-info a:hover {
+            color: var(--accent-teal);
+        }
+
+        .resume-actions {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .resume-section {
+            margin-bottom: 2.75rem;
+        }
+
+        .resume-section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+            text-transform: uppercase;
+            letter-spacing: 0.75px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .resume-entry {
+            margin-bottom: 1.75rem;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 0.25rem;
+        }
+
+        .entry-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .entry-org {
+            color: var(--accent-teal);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .entry-advisor {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        .entry-date {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .entry-bullets {
+            margin-top: 0.5rem;
+            padding-left: 1.25rem;
+            color: var(--text-muted);
+        }
+
+        .entry-bullets li {
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Nested honors sub-bullets */
+        .entry-bullets ul {
+            list-style-type: circle;
+            padding-left: 1.25rem;
+            margin-top: 0.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .skill-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-modern);
+            padding: 1.25rem;
+        }
+
+        .skill-card strong {
+            display: block;
+            color: var(--text-main);
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
+        }
+
+        .skill-card span {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.45;
+        }
+
+        @media (max-width: 768px) {
+            .resume-header {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            .entry-header {
+                flex-direction: column;
+            }
+            .resume-actions {
+                width: 100%;
+            }
+            .resume-actions .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media print {
+            header, footer, .resume-actions { display: none !important; }
+            .resume-page { padding: 0; }
+            body { background: #fff; color: #000; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">LH</a></div>
+            <ul>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="resume.html" style="color: var(--accent-teal); font-weight: 700;">Resume</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="resume-page">
+        <!-- Resume Header -->
+        <div class="resume-header">
+            <div class="resume-title">
+                <h1>Lucy Huang</h1>
+                <p>B.S. in Electrical Engineering &bull; UCLA (Class of 2029)</p>
+                <div class="contact-info">
+                    <span><a href="mailto:huanglucy@ucla.edu">huanglucy@ucla.edu</a></span>
+                    <span>&bull;</span>
+                    <span>(858) 648-8618</span>
+                    <span>&bull;</span>
+                    <span><a href="https://www.linkedin.com/in/lucy99" target="_blank" rel="noopener noreferrer">linkedin.com/in/lucy99</a></span>
+                </div>
+            </div>
+            <div class="resume-actions">
+                <a href="101926 Lucy Huang Resume.pdf" download class="btn">Download PDF</a>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <section class="resume-section">
+            <h2 class="resume-section-title">Education</h2>
+            <div class="resume-entry">
+                <div class="entry-header">
+                    <div>
+                        <span class="entry-title">University of California, Los Angeles</span>
+                        <div class="entry-org">B.S. in Electrical Engineering</div>
+                    </div>
+                    <span class="entry-date">Expected Graduation: June 2029</span>
+                </div>
+                <ul class="entry-bullets">
+                    <li><strong>Relevant Coursework:</strong> Differential Equations, Data Structures and Algorithms, IoT, Multivariable Calculus, Discrete Math, Linear Algebra.</li>
+                    <li><strong>Student Organizations:</strong> IEEE WRAP (Wireless, RF, Analog Project), Engineering Student Association (ESA Intern), BruinSpace (RAPID Electrical), Design Build Fly (Electronics and Propulsion Team), Society of Women Engineers (SWE).</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section class="resume-section">
+            <h2 class="resume-section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <strong>Languages &amp; Software</strong>
+                    <span>C++, Python, Java, MATLAB, Linux, Ansys Lumerical, Autodesk Inventor, Fusion 360</span>
+                </div>
+                <div class="skill-card">
+                    <strong>Hardware &amp; Instrumentation</strong>
+                    <span>Oscilloscopes, Function Generator, UV-Vis-NIR Spectroscopy, SEM, FTIR, Raman</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Experience -->
+        <section class="resume-section">
+            <h2 class="resume-section-title">Research Experience</h2>
+
+            <div class="resume-entry">
+                <div class="entry-header">
+                    <div>
+                        <span class="entry-title">Undergraduate Researcher</span>
+                        <div class="entry-org">Quantum Light-Matter Cooperative (QLMC), UC Los Angeles</div>
+                        <div class="entry-advisor">Faculty Advisor: Dr. Sergio Carbajo</div>
+                    </div>
+                    <span class="entry-date">September 2026 – Present</span>
+                </div>
+                <ul class="entry-bullets">
+                    <li>Integrated dual comb spectroscopy on photonic chips for precision quantum sensing to maximize signal-to-noise ratio.</li>
+                </ul>
+            </div>
+
+            <div class="resume-entry">
+                <div class="entry-header">
+                    <div>
+                        <span class="entry-title">Student Researcher and Mentor</span>
+                        <div class="entry-org">Nanoscale Interfaces &amp; Assembly Lab, UC San Diego MRSEC, La Jolla, CA</div>
+                        <div class="entry-advisor">Faculty Advisor: Dr. Andrea R. Tao</div>
+                    </div>
+                    <span class="entry-date">June 2024 – September 2026</span>
+                </div>
+                <ul class="entry-bullets">
+                    <li>Assembled gold nanospheres functionalized with graphene oxide, analyzing plasmonic coupling.</li>
+                    <li>Synthesized copper(I) oxide nanocrystals, designing CAD intersectional structures for finite-difference time-domain (FDTD) simulations.</li>
+                    <li>Developed FDTD automation scripts using the Lumerical Python API to optimize the experimental data collection process.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Work Experience -->
+        <section class="resume-section">
+            <h2 class="resume-section-title">Work Experience</h2>
+
+            <div class="resume-entry">
+                <div class="entry-header">
+                    <div>
+                        <span class="entry-title">Math and Language Arts Teaching Assistant</span>
+                        <div class="entry-org">Art of Problem Solving, San Diego, CA</div>
+                    </div>
+                    <span class="entry-date">April 2026 – Present</span>
+                </div>
+                <ul class="entry-bullets">
+                    <li>Directed virtual homework help sessions on advanced mathematical topics ranging from Pre-Algebra to High School Contest Math.</li>
+                    <li>Led in-person summer camps for Math Beasts Camp 3 and High School Contest Math.</li>
+                </ul>
+            </div>
+
+            <div class="resume-entry">
+                <div class="entry-header">
+                    <div>
+                        <span class="entry-title">Court Monitor</span>
+                        <div class="entry-org">University City Racquet Club, San Diego, CA</div>
+                    </div>
+                    <span class="entry-date">June 2023 – February 2025</span>
+                </div>
+                <ul class="entry-bullets">
+                    <li>Managed business operations including court bookings, retail sales, tournament logistics, and weekly league match direction.</li>
+                    <li>Oversaw membership enrollment, facility repairs, maintenance scheduling, and customer service.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Publications, Honors & Awards -->
+        <section class="resume-section">
+            <h2 class="resume-section-title">Publications, Honors &amp; Awards</h2>
+            
+            <div class="resume-entry">
+                <span class="entry-title" style="font-size: 1.05rem;">Research Manuscripts &amp; Presentations</span>
+                <ul class="entry-bullets">
+                    <li>
+                        <strong>Huang, L., et al. (2026, August)</strong> <em>Co-Assembly of Au Nanospheres and Graphene Oxide into Plasmonically Active Films.</em> 2026 Summer Research Conference at UC San Diego.
+                    </li>
+                    <li>
+                        <strong>Huang, L., et al. (2025, November)</strong> <em>Simulating the Optical Properties of Copper(I) Oxide Nanocubes in Monolayer Films and with Structural Alterations.</em>
+                        <ul>
+                            <li>2026 California Science and Engineering Fair: Honorable Mention in Physics and Astronomy</li>
+                            <li>2026 Greater San Diego Science and Engineering Fair: 1st Place Award in Senior Engineering (Energy, Materials, and Transport); Winner of General Atomics Sciences Education Foundation &amp; DRS Daylight Solutions Awards</li>
+                            <li>2025 Regeneron Science Talent Search: Research Manuscript</li>
+                            <li>2025 MRSEC RIMSE Poster Session at UC San Diego: Most Engaged High School Researcher</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Huang, L., et al. (2024, April)</strong> <em>Morphological Changes and Kinetic Insights of Copper(I) Oxide Nanocrystals.</em>
+                        <ul>
+                            <li>2025 California Science and Engineering Fair: Finalist in Chemistry</li>
+                            <li>2025 Greater San Diego Science and Engineering Fair: 1st Place Award in Senior Chemistry; Winner of Office of Naval Research Award, Association for Women in Science, and American Society of Materials International Awards</li>
+                            <li>2024 MRSEC RIMSE Poster Session at UC San Diego: Most Engaged High School Researcher</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="resume-entry">
+                <span class="entry-title" style="font-size: 1.05rem;">Academic Competitions &amp; Recognitions</span>
+                <ul class="entry-bullets">
+                    <li><strong>NCWIT Aspirations in Computing:</strong> Rising Star Award (January 2026)</li>
+                    <li><strong>Science Olympiad:</strong> 5+ individual awards at Southern California States (2024–2026); led school's top 5 ranking and 10+ awards at San Diego Regional Finals (2019–2026); 10+ awards across Invitationals including Golden Gate (2026), Triton UCSD (2025–2026), Stanford (2025), and San Diego County (2019).</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Leadership -->
+        <section class="resume-section">
+            <h2 class="resume-section-title">Leadership</h2>
+
+            <div class="resume-entry">
+                <div class="entry-header">
+                    <div>
+                        <span class="entry-title">Co-President, Head Coach, Event Coach, Competitor</span>
+                        <div class="entry-org">Science Olympiad</div>
+                    </div>
+                    <span class="entry-date">September 2018 – May 2026</span>
+                </div>
+                <ul class="entry-bullets">
+                    <li>Led 30+ members per year, improving state rankings by 3 spots; coached team to invitational, regional, and state victories.</li>
+                </ul>
+            </div>
+
+            <div class="resume-entry">
+                <div class="entry-header">
+                    <div>
+                        <span class="entry-title">Student Leadership Board Member</span>
+                        <div class="entry-org">Greater San Diego Science and Engineering Fair (GSDSEF)</div>
+                    </div>
+                    <span class="entry-date">May 2025 – May 2026</span>
+                </div>
+                <ul class="entry-bullets">
+                    <li>Promoted GSDSEF across regional schools, led technical workshops, and mentored students through project design and experimental execution.</li>
+                </ul>
+            </div>
+
+            <div class="resume-entry">
+                <div class="entry-header">
+                    <div>
+                        <span class="entry-title">Mentee Representative</span>
+                        <div class="entry-org">UCSD Empowering Development for Girls in Engineering (EDGE)</div>
+                    </div>
+                    <span class="entry-date">April 2023 – May 2026</span>
+                </div>
+                <ul class="entry-bullets">
+                    <li>Elected to serve on the board advocating mentee interests; committed 4 years to the bi-weekly engineering mentorship program.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Lucy Huang &bull; <a href="index.html" style="color: var(--accent-teal); text-decoration: none;">Return to Portfolio</a></p>
+    </footer>
+
+</body>
+</html>
