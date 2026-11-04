@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    /* Color Palette Specs */
+    --bg-color: #f4f7fa;          /* Sleek white with a distinct cool blue/slate tone */
+    --card-bg: #ffffff;           /* Clean stark white for contrasting elements */
+    --text-main: #0f172a;         /* Deep slate/navy off-black for premium contrast */
+    --text-muted: #475569;        /* Soft navy-tinted gray for secondary body text */
+    --accent-teal: #0d9488;       /* Primary technical teal blue for highlights */
+    --accent-glow: rgba(13, 148, 136, 0.15); /* Soft teal halo for interactive glow states */
+    --border-color: #e2e8f0;      /* Subtle slate-tinted borders */
+    
+    /* Layout Constants */
+    --radius-modern: 8px;         /* Perfectly balanced soft-rounded corners */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* navigation bar */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(244, 247, 250, 0.8);
+    backdrop-filter: blur(12px); /* Modern frosted-glass effect */
+    border-bottom: 1px solid var(--border-color);
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.25rem 2rem;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--accent-teal);
+    letter-spacing: -0.5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: var(--transition-smooth);
+}
+
+nav ul li a:hover {
+    color: var(--accent-teal);
+}
+
+/* layout*/
+section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+}
+
+/* hero */
+#hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 4rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 0.75rem;
+    color: var(--text-main);
+}
+
+.hero-content h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 650px;
+    margin-bottom: 2.5rem;
+}
+
+.highlight {
+    color: var(--accent-teal);
+}
+
+/* buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--text-main);
+    color: var(--bg-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-modern);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 2px solid var(--text-main);
+    transition: var(--transition-smooth);
+}
+
+.btn:hover {
+    background-color: var(--accent-teal);
+    border-color: var(--accent-teal);
+    box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+.btn.secondary {
+    background-color: transparent;
+    color: var(--text-main);
+    border: 2px solid var(--border-color);
+    margin-left: 1rem;
+}
+
+.btn.secondary:hover {
+    background-color: var(--card-bg);
+    border-color: var(--text-main);
+    box-shadow: none;
+}
+
+/* projects */
+#projects h2, #contact h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.75rem;
+    color: var(--text-main);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    padding: 2.25rem;
+    border-radius: var(--radius-modern);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+    transition: var(--transition-smooth);
+}
+
+/* interactive lift and glow */
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent-teal);
+    box-shadow: 0 12px 24px -10px rgba(15, 23, 42, 0.08), 0 0 16px var(--accent-glow);
+}
+
+.project-card h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--text-main);
+}
+
+.project-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.75rem;
+}
+
+/* tech badge container */
+.tech-tags {
+    margin-bottom: 1.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* tech labels */
+.tech-tags span {
+    background-color: #f1f5f9;
+    color: var(--accent-teal);
+    font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+}
+
+.project-links a {
+    color: var(--text-main);
+    margin-right: 1.5rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+}
+
+.project-links a:hover {
+    color: var(--accent-teal);
+}
+
+/* contact and footer */
+#contact {
+    text-align: center;
+}
+
+#contact p {
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+}
+
+/* for mobile devices */
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 2.5rem; }
+    .hero-content h2 { font-size: 1.4rem; }
+    .contact-links { flex-direction: column; gap: 1rem; align-items: center; }
+    .btn.secondary { margin-left: 0; width: 100%; max-width: 250px; }
+    .btn { width: 100%; max-width: 250px; text-align: center; }
+}
