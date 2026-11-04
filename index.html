@@ -5,72 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucy Huang | Electrical Engineer at UCLA</title>
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        .typewriter-container {
-            display: inline-flex;
-            align-items: center;
-            font-size: 3.5rem;
-            font-weight: 800;
-            letter-spacing: -1px;
-            margin-bottom: 0.75rem;
-            white-space: nowrap;
-        }
-
-        .typing-first {
-            color: #0f172a;
-            display: inline-block;
-            white-space: pre; /* Preserves trailing space cleanly */
-            overflow: hidden;
-            width: 0;
-            border-right: 4px solid #0d9488;
-            vertical-align: bottom;
-            animation: 
-                type-first 1.2s steps(8, end) 0.2s forwards, 
-                blink-first 0.75s step-end 2;
-        }
-
-        .typing-second {
-            color: #0d9488;
-            display: inline-block;
-            white-space: nowrap;
-            overflow: hidden;
-            width: 0;
-            border-right: 4px solid transparent;
-            vertical-align: bottom;
-            animation: 
-                type-second 1.5s steps(10, end) 1.5s forwards, 
-                blink-second 0.75s step-end infinite 1.5s;
-        }
-
-        @keyframes type-first {
-            from { width: 0; }
-            to { width: 8ch; border-right-color: transparent; } /* Hides cursor 1 when done */
-        }
-
-        @keyframes type-second {
-            from { width: 0; border-right-color: #0d9488; }
-            to { width: 10ch; border-right-color: #0d9488; }
-        }
-
-        @keyframes blink-first {
-            from, to { border-color: transparent; }
-            50% { border-color: #0d9488; }
-        }
-
-        @keyframes blink-second {
-            from, to { border-color: transparent; }
-            50% { border-color: #0d9488; }
-        }
-
-        @media (max-width: 768px) {
-            .typewriter-container { 
-                font-size: 2.2rem;
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-    </style>
 </head>
 <body>
 
@@ -98,34 +32,6 @@
             <a href="#projects" class="btn">Explore My Projects</a>
         </div>
     </section>
-
-
-    <!-- Hero Section -->
-    <section id="hero">
-    <div class="hero-content">
-        <h1 class="typewriter-container">
-            <span class="typing-first">Hi, I'm&nbsp;</span>
-            <span class="typing-second">Lucy Huang</span>
-        </h1>
-        <h2>Electrical engineering student at UCLA (Class of 2029) and Researcher at Quantum Light-Matter Cooperative</h2>
-        <p>I'm interested in photonic integrated circuits, hardware systems, and DSP</p>
-        <a href="#projects" class="btn">Explore My Projects</a>
-    </div>
-    </section>
-    
-    <!-- <section id="hero">
-        <div class="hero-content">
-        <h1 class="typewriter-container">
-            <!-- Part 1: "Hi, I'm " -->
-            <!-- <span class="typing-first">Hi, I'm&nbsp;</span><!-- &nbsp; is a forced space -->
-            <!-- Part 2: Your Name -->
-            <!-- <span class="typing-second">Lucy Huang</span>
-        </h1>
-            <h2>Electrical engineering student at UCLA (Class of 2029) and Researcher at Quantum Light-Matter Cooperative</h2>
-            <p>I'm interested in photonic integrated circuits, hardware systems, and DSP</p>
-            <a href="#projects" class="btn">View My Work</a>
-        </div>
-    </section> -->
 
     <!-- Projects Section -->
     <section id="projects">
