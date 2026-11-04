@@ -117,6 +117,35 @@ section {
     color: var(--accent-teal);
 }
 
+/* typing text effects */
+.typing-text {
+    display: inline-block;
+    font-family: 'Inter', sans-serif; /* Keeps your modern header font */
+    font-weight: 800;
+    white-space: nowrap;
+    overflow: hidden; /* Hides letters until revealed */
+    border-right: 4px solid var(--accent-teal); /* Blinking cursor line */
+    width: 0; /* Starts hidden */
+    
+    /* 
+       - 'typing' takes 3.5 seconds to type out the line
+       - 'steps(18)' must match the exact number of characters (letters + spaces)
+    */
+    animation: 
+        typing 3.5s steps(18, end) forwards,
+        blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--accent-teal); }
+}
+
 /* buttons */
 .btn {
     display: inline-block;
