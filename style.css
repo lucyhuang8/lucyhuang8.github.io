@@ -240,6 +240,93 @@ section {
     margin-bottom: 1.75rem;
 }
 
+/* Project Year Subtitle */
+.project-year {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent-teal);
+    margin-top: -0.35rem;
+    margin-bottom: 1.25rem;
+}
+
+/* Fancy Collapsible Award Box */
+.award-accordion {
+    margin-bottom: 1.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-modern);
+    background-color: #fafbfc;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.award-accordion summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.65rem 0.95rem;
+    cursor: pointer;
+    user-select: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-main);
+    letter-spacing: 0.25px;
+    background-color: #ffffff;
+    border-bottom: 1px solid transparent;
+    transition: var(--transition-smooth);
+}
+
+.award-accordion[open] summary {
+    border-bottom-color: var(--border-color);
+    background-color: rgba(13, 148, 136, 0.04);
+}
+
+.award-accordion summary:hover {
+    color: var(--accent-teal);
+}
+
+/* Count Tag */
+.count-badge {
+    background-color: var(--accent-teal);
+    color: #ffffff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+}
+
+/* Custom Bullet List */
+.award-list {
+    list-style: none;
+    padding: 0.6rem 0.9rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.award-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.83rem;
+    line-height: 1.45;
+    color: var(--text-muted);
+}
+
+.award-list li strong {
+    color: var(--text-main);
+}
+
+/* Styled Teal Square Bullet */
+.bullet-dot {
+    flex-shrink: 0;
+    width: 6px;
+    height: 6px;
+    margin-top: 0.35rem;
+    border-radius: 2px;
+    background-color: var(--accent-teal);
+}
+
 /* tech badge container */
 .tech-tags {
     margin-bottom: 1.75rem;
